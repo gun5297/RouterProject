@@ -1,12 +1,12 @@
 import { useParams } from 'react-router-dom';
 import { GALLERYINFOCONTAINER } from './styled';
 import { useContext, useEffect, useState } from 'react';
-import { GalleryContext } from '../../contexts/GalleryContext';
 import SubNav from '../common/SubNav';
+import { GlobalContext } from '../../contexts/GlobalContext';
 
 const GalleryInfo = () => {
     const { userId } = useParams();
-    const { data, loading } = useContext(GalleryContext);
+    const { data, loading } = useContext(GlobalContext);
     const [onData, setOnData] = useState(null);
 
     useEffect(() => {

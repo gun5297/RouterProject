@@ -1,10 +1,11 @@
 import { useContext, useEffect, useState } from 'react';
 import GalleryItem from './GalleryItem';
 import { GALLERYLISTCONTAINER } from './styled';
-import { GalleryContext } from '../../contexts/GalleryContext';
+
+import { GlobalContext } from '../../contexts/GlobalContext';
 
 const GalleryList = () => {
-    const { data } = useContext(GalleryContext);
+    const { data } = useContext(GlobalContext);
     const [onData, setOnData] = useState(null);
     const [cnt, setCnt] = useState(4);
     const onClick = () => {

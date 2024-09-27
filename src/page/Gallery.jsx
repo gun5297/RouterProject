@@ -3,10 +3,10 @@ import { GALLERYCONTAINER } from './styled';
 import GalleryLoading from '../components/gallery/GalleryLoading';
 import SubNav from '../components/common/SubNav';
 import { useContext } from 'react';
-import { GalleryContext } from '../contexts/GalleryContext';
+import { GlobalContext } from '../contexts/GlobalContext';
 
 const Gallery = () => {
-    const { loading, error } = useContext(GalleryContext);
+    const { loading, error } = useContext(GlobalContext);
     if (error) return alert(error);
     return (
         <GALLERYCONTAINER>

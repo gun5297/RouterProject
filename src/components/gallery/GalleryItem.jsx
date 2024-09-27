@@ -2,15 +2,13 @@ import { Link } from 'react-router-dom';
 import { GALLERYITEMCONTAINER } from './styled';
 import { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../../contexts/GlobalContext';
-import { GalleryContext } from '../../contexts/GalleryContext';
 
 const GalleryItem = ({ id, webformatURL, user }) => {
-    const { likeData, addLikeData, delLikeData } = useContext(GlobalContext);
-    const { data } = useContext(GalleryContext);
+    const { data, likeData, addLikeData, delLikeData } = useContext(GlobalContext);
 
     const [like, setLike] = useState(likeData.find((item) => item.id == id) ? true : false);
     useEffect(() => {
-        like ? addLikeData(data.find((item) => item.id == id)) : delLikeData(id);
+        data && like ? addLikeData(data.find((item) => item.id == id)) : delLikeData(id);
     }, [like]);
     return (
         <GALLERYITEMCONTAINER color={like ? '#b71c1c' : '#fafafa'}>
