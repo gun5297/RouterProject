@@ -839,6 +839,11 @@ concat-map@0.0.1:
   resolved "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz"
   integrity sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==
 
+contexts@^0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/contexts/-/contexts-0.0.0.tgz#5d4dda761ce9a21845f24eb75b8010a31a4e4ec5"
+  integrity sha512-Zoae9wVUlvDZK/SuHimsauRcEGes7e3m56LM+4enj8D0B/Est4wHg37N6/aMrMReWPujyHtwS/9RPPD8TX6NNw==
+
 convert-source-map@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/convert-source-map/-/convert-source-map-2.0.0.tgz"

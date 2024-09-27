@@ -11,7 +11,7 @@ export const useAxios = (urlVal = []) => {
         axios
             .get(urlVal)
             .then((res) => {
-                setData(res.data);
+                setData(res.data.hits);
                 setLoading(true);
                 setError(null);
             })
@@ -25,5 +25,5 @@ export const useAxios = (urlVal = []) => {
         getData();
     }, [urlVal]);
 
-    return { data, loading, error };
+    return { data, setData, loading, error };
 };

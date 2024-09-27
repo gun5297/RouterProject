@@ -50,6 +50,10 @@ export const NAVCONTAINER = styled.div`
 export const SUBNAVCONTAINER = styled.div`
     width: 100%;
     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    transition: all 0.3s;
+    &:hover {
+        background: #f5f5f5;
+    }
     ul {
         display: flex;
         align-items: center;

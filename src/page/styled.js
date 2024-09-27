@@ -44,5 +44,16 @@ export const ABOUTCONTAINER = styled.div`
         }
     }
 `;
-export const GALLERYCONTAINER = styled.div``;
+export const GALLERYCONTAINER = styled.div`
+    width: 100%;
+    .inner {
+        width: 1400px;
+        margin: auto;
+        h2 {
+            text-align: center;
+            font-size: 50px;
+            margin: 80px 0;
+        }
+    }
+`;
 export const BOARDCONTAINER = styled.div``;
