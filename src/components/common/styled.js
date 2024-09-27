@@ -46,6 +46,20 @@ export const NAVCONTAINER = styled.div`
             }
         }
     }
+    .like {
+        position: relative;
+        i {
+            font-size: 30px;
+            color: #b71c1c;
+            cursor: pointer;
+        }
+        span {
+            color: #fafafa;
+            position: absolute;
+            right: -10px;
+            top: -10px;
+        }
+    }
 `;
 export const SUBNAVCONTAINER = styled.div`
     width: 100%;

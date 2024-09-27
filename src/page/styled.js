@@ -57,3 +57,12 @@ export const GALLERYCONTAINER = styled.div`
     }
 `;
 export const BOARDCONTAINER = styled.div``;
+export const LIKECONTAINER = styled.div`
+    width: 100%;
+    h2 {
+        text-align: center;
+        font-size: 80px;
+        margin: 80px 0;
+        font-weight: 700;
+    }
+`;

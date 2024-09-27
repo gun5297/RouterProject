@@ -6,6 +6,40 @@ export const GALLERYLISTCONTAINER = styled.ul`
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 80px;
+    .btn-wrap {
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i {
+            font-size: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 700;
+            animation: colorChange 3s infinite;
+        }
+    }
+    @keyframes colorChange {
+        0% {
+            color: initial;
+            transform: scale(1);
+        }
+        25% {
+            transform: scale(1.2);
+        }
+        50% {
+            color: #b71c1c;
+            transform: scale(1);
+        }
+        75% {
+            transform: scale(1.2);
+        }
+        100% {
+            color: initial;
+            transform: scale(1);
+        }
+    }
 `;
 export const GALLERYITEMCONTAINER = styled.li`
     width: 45%;

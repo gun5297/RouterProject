@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
 import { NAVCONTAINER } from './styled';
+import { useContext } from 'react';
+import { GlobalContext } from '../../contexts/GlobalContext';
 
 const Nav = () => {
+    const { likeData } = useContext(GlobalContext);
     return (
         <NAVCONTAINER>
             <nav>
@@ -20,6 +23,12 @@ const Nav = () => {
                     </li>
                 </ul>
             </nav>
+            <Link to='like'>
+                <div className='like'>
+                    <i className='xi-heart'></i>
+                    <span>{likeData.length}</span>
+                </div>
+            </Link>
         </NAVCONTAINER>
     );
 };
