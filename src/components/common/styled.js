@@ -3,13 +3,16 @@ import styled from 'styled-components';
 export const HEADERCONTAINER = styled.header`
     width: 100%;
     background: #212121;
+    opacity: 0.98;
     box-shadow: rgba(33, 35, 38, 0.2) 0px 10px 10px -10px;
     transition: all 0.3s;
-    position: relative;
-    z-index: 100;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    backdrop-filter: blur(45px);
     &:hover {
-        background: #424242;
         box-shadow: rgba(33, 35, 38, 0.9) 0px 10px 10px -10px;
+        opacity: 1;
     }
 `;
 export const FOOTERCONTAINER = styled.footer`

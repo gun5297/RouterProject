@@ -86,7 +86,7 @@ export const LIKEITEMCONTAINER = styled.li`
         }
         span {
             display: block;
-            color: ${(porps) => porps.color};
+            color: ${(props) => props.color};
             font-size: 30px;
             position: absolute;
             bottom: 20px;

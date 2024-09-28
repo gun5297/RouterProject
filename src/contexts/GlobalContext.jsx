@@ -1,5 +1,6 @@
 import { createContext, useEffect, useMemo, useState } from 'react';
 import { useAxios } from '../hooks/useAxios';
+import { useAxiosBoard } from '../hooks/useAxiosBoard';
 
 export const GlobalContext = createContext(null);
 
@@ -17,9 +18,34 @@ const GlobalProvider = ({ children }) => {
     const delLikeData = (id) => {
         setLikeData(likeData.filter((item) => item.id !== id));
     };
+
+    const boardurl = `https://jsonplaceholder.typicode.com/posts`;
+    const { barddata, bardloading, barderror } = useAxiosBoard(boardurl);
     const value = useMemo(
-        () => ({ likeData, setLikeData, addLikeData, delLikeData, data, loading, error }),
-        [likeData, setLikeData, addLikeData, delLikeData, data, loading, error]
+        () => ({
+            likeData,
+            setLikeData,
+            addLikeData,
+            delLikeData,
+            data,
+            loading,
+            error,
+            barddata,
+            bardloading,
+            barderror,
+        }),
+        [
+            likeData,
+            setLikeData,
+            addLikeData,
+            delLikeData,
+            data,
+            loading,
+            error,
+            barddata,
+            bardloading,
+            barderror,
+        ]
     );
     return <GlobalContext.Provider value={value}>{children}</GlobalContext.Provider>;
 };

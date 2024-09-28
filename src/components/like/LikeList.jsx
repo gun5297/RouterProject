@@ -2,7 +2,6 @@ import { useContext, useState } from 'react';
 import LikeItem from './LikeItem';
 import { LIKELISTCONTAINER } from './styled';
 import { GlobalContext } from '../../contexts/GlobalContext';
-import GalleryItem from '../gallery/GalleryItem';
 import { Link } from 'react-router-dom';
 
 const LikeList = () => {
