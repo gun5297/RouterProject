@@ -1,9 +1,8 @@
 import GalleryInfo from './components/gallery/GalleryInfo';
+import Layout from './Layout/Layout';
 import About from './page/About';
 import Board from './page/Board';
 import Gallery from './page/Gallery';
-import GalleryLayout from './page/GalleryLayout';
-import Layout from './page/Layout';
 import Like from './page/Like';
 import Main from './page/Main';
 import GlobalStyle from './styled/reset';
@@ -18,7 +17,7 @@ const App = () => {
                     <Route path='/' element={<Layout />}>
                         <Route index element={<Main />} />
                         <Route path='about' element={<About />} />
-                        <Route path='gallery' element={<GalleryLayout />}>
+                        <Route path='gallery'>
                             <Route index element={<Gallery />} />
                             <Route path=':userId' element={<GalleryInfo />} />
                         </Route>

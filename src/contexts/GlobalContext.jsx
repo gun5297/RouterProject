@@ -22,9 +22,6 @@ const GlobalProvider = ({ children }) => {
     const allonTrue = () => {
         setAllon(true);
     };
-
-    const boardurl = `https://jsonplaceholder.typicode.com/posts`;
-    const { barddata, bardloading, barderror } = useAxiosBoard(boardurl);
     const value = useMemo(
         () => ({
             likeData,
@@ -34,26 +31,10 @@ const GlobalProvider = ({ children }) => {
             data,
             loading,
             error,
-            barddata,
-            bardloading,
-            barderror,
             allon,
             allonTrue,
         }),
-        [
-            likeData,
-            setLikeData,
-            addLikeData,
-            delLikeData,
-            data,
-            loading,
-            error,
-            barddata,
-            bardloading,
-            barderror,
-            allon,
-            allonTrue,
-        ]
+        [likeData, setLikeData, addLikeData, delLikeData, data, loading, error, allon, allonTrue]
     );
     return <GlobalContext.Provider value={value}>{children}</GlobalContext.Provider>;
 };

@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { LAYOUTCONTAINER } from './styled';
+import { LAYOUTCONTAINER } from '../page/styled';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import GlobalProvider from '../contexts/GlobalContext';

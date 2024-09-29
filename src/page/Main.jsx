@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import News from '../components/main/News';
 import Visual from '../components/main/Visual';
 import { MAINCONTAINER } from './styled';
@@ -8,8 +7,8 @@ const Main = () => {
     return (
         <MAINCONTAINER>
             <Visual />
-            <News />
             <SubNav />
+            <News />
         </MAINCONTAINER>
     );
 };

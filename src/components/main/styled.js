@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const VISUALCONTAINER = styled.div`
     width: 100%;
-    margin-bottom: 80px;
     .img-wrap {
         height: 600px;
         overflow: hidden;
@@ -23,13 +22,15 @@ export const VISUALCONTAINER = styled.div`
 `;
 export const NEWSCONTAINER = styled.div`
     width: 100%;
+    margin-bottom: 80px;
     h2 {
         text-transform: uppercase;
         font-size: 50px;
         text-align: center;
-        margin-bottom: 30px;
+        margin: 80px 0px 30px 0px;
     }
     .inner {
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;

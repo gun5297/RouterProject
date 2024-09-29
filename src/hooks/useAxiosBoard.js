@@ -3,9 +3,9 @@ import axios from 'axios';
 
 export const useAxiosBoard = (urlVal = []) => {
     // const [data, setData] = useState(urlVal);
-    const [barddata, setData] = useState([]);
-    const [bardloading, setLoading] = useState(false);
-    const [barderror, setError] = useState(null);
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
 
     const getData = () => {
         axios
@@ -25,5 +25,5 @@ export const useAxiosBoard = (urlVal = []) => {
         getData();
     }, [urlVal]);
 
-    return { barddata, setData, bardloading, barderror };
+    return { data, setData, loading, error };
 };
