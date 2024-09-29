@@ -74,11 +74,14 @@ export const NEWSCONTAINER = styled.div`
     }
 `;
 export const MAKEPORSHCECONTAINER = styled.div`
+    width: 1400px;
+    height: 780px;
+    margin: 80px auto;
     position: relative;
+    border-radius: 50px;
+    box-shadow: rgba(33, 35, 38, 0.4) 0px 10px 10px -10px;
+    overflow: hidden;
     .img-wrap {
-        width: 100%;
-        height: 1000px;
-        overflow: hidden;
         img {
             width: 100%;
         }
