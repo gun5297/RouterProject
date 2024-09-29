@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { BOARDPAGINGCONTAINER } from './styled';
 
 const BoardPaging = ({ pageNumber, onCurrent, pageChange }) => {
     const arr = [];
@@ -6,7 +7,7 @@ const BoardPaging = ({ pageNumber, onCurrent, pageChange }) => {
         arr.push(i);
     }
     return (
-        <>
+        <BOARDPAGINGCONTAINER>
             <a
                 href='#'
                 onClick={(e) => {
@@ -47,7 +48,7 @@ const BoardPaging = ({ pageNumber, onCurrent, pageChange }) => {
                     pageChange('last');
                 }}
             >{`>>`}</a>
-        </>
+        </BOARDPAGINGCONTAINER>
     );
 };
 

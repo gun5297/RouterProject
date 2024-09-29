@@ -1,11 +1,17 @@
+import { useContext } from 'react';
 import { BOARDITEMCONTAINER } from './styled';
+import { BoardContext } from '../../contexts/BoardContext';
 
-const BoardItem = () => {
+const BoardItem = ({ id, title, body, isDone }) => {
+    const { changeIsDone } = useContext(BoardContext);
     return (
-        <BOARDITEMCONTAINER>
-            <span>1번</span>
-            <p>포르쉐 911 GT3 출고 기간은 얼마나 걸리나요?</p>
-            <i className='xi-toggle-off'></i>
+        <BOARDITEMCONTAINER className={isDone ? 'active' : ''}>
+            {isDone ? <i className='xi-label' /> : <span>{id}</span>}
+            <p>{title}</p>
+            <i
+                className={isDone ? 'xi-toggle-on' : 'xi-toggle-off'}
+                onClick={() => changeIsDone(id)}
+            ></i>
         </BOARDITEMCONTAINER>
     );
 };

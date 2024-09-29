@@ -12,12 +12,42 @@ export const BOARDITEMCONTAINER = styled.li`
     justify-content: space-between;
     box-sizing: border-box;
     padding: 0px 20px;
-    border: 1px solid #000;
+    border: 1px solid #757575;
+    border-radius: 10px;
     margin-bottom: 10px;
+    cursor: pointer;
+    &.active {
+        background: #616161;
+        color: #fafafa;
+        &:hover {
+            background: #424242;
+        }
+    }
     i {
         font-size: 30px;
     }
     &:hover {
-        background: #eeeeee;
+        background: #f5f5f5;
+    }
+`;
+export const BOARDPAGINGCONTAINER = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+    a {
+        padding: 0 10px;
+        position: relative;
+        &:hover::after {
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: #424242;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+        }
     }
 `;
