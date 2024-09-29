@@ -51,3 +51,11 @@ export const BOARDPAGINGCONTAINER = styled.div`
         }
     }
 `;
+export const BOARDETAILSCONTAINER = styled.div`
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background: #f5f5f5;
+    margin-bottom: 20px;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+`;
