@@ -15,7 +15,7 @@ export const BOARDITEMCONTAINER = styled.li`
     border: 1px solid #757575;
     border-radius: 10px;
     margin-bottom: 10px;
-    cursor: pointer;
+    cursor: url('/images/click.png'), auto;
     &.active {
         background: #616161;
         color: #fafafa;
@@ -25,6 +25,13 @@ export const BOARDITEMCONTAINER = styled.li`
     }
     i {
         font-size: 30px;
+        &.xi-toggle-on,
+        &.xi-toggle-off {
+            cursor: pointer;
+        }
+    }
+    p {
+        user-select: none;
     }
     &:hover {
         background: #f5f5f5;
