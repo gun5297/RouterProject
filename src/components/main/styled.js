@@ -22,7 +22,6 @@ export const VISUALCONTAINER = styled.div`
 `;
 export const NEWSCONTAINER = styled.div`
     width: 100%;
-    margin-bottom: 80px;
     h2 {
         text-transform: uppercase;
         font-size: 50px;
@@ -70,6 +69,39 @@ export const NEWSCONTAINER = styled.div`
                 &:hover {
                     background: #b71c1c;
                 }
+            }
+        }
+    }
+`;
+export const MAKEPORSHCECONTAINER = styled.div`
+    position: relative;
+    .img-wrap {
+        width: 100%;
+        height: 1000px;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+    }
+    ul {
+        position: absolute;
+        right: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: rgba(33, 35, 38, 0.4) 0px 10px 10px -10px;
+        li {
+            width: 100px;
+            height: 100px;
+            transition: all 0.3s;
+            opacity: 0.8;
+            &:hover {
+                transform: scale(1.02);
+                opacity: 1;
+                cursor: pointer;
             }
         }
     }
