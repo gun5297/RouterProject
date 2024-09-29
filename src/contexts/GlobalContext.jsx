@@ -8,6 +8,7 @@ const GlobalProvider = ({ children }) => {
     const url = `https://pixabay.com/api/?key=45297051-2d96f9c98d89af3f97081c87c&q=porsche&image_type=photo&pretty=true`;
     const { data, loading, error } = useAxios(url);
     const [likeData, setLikeData] = useState([]);
+    const [allon, setAllon] = useState(false);
     const addLikeData = (data) => {
         if (likeData.find((item) => item === data)) {
             return;
@@ -17,6 +18,9 @@ const GlobalProvider = ({ children }) => {
     };
     const delLikeData = (id) => {
         setLikeData(likeData.filter((item) => item.id !== id));
+    };
+    const allonTrue = () => {
+        setAllon(true);
     };
 
     const boardurl = `https://jsonplaceholder.typicode.com/posts`;
@@ -33,6 +37,8 @@ const GlobalProvider = ({ children }) => {
             barddata,
             bardloading,
             barderror,
+            allon,
+            allonTrue,
         }),
         [
             likeData,
@@ -45,6 +51,8 @@ const GlobalProvider = ({ children }) => {
             barddata,
             bardloading,
             barderror,
+            allon,
+            allonTrue,
         ]
     );
     return <GlobalContext.Provider value={value}>{children}</GlobalContext.Provider>;
