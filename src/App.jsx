@@ -6,7 +6,7 @@ import Gallery from './page/Gallery';
 import Like from './page/Like';
 import Main from './page/Main';
 import GlobalStyle from './styled/reset';
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Link, HashRouter } from 'react-router-dom';
 
 const App = () => {
     return (
