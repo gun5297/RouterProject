@@ -17,7 +17,7 @@ const GalleryItem = ({ id, webformatURL, user }) => {
             </div>
             <div className='text-wrap'>
                 <p>{user}</p>
-                <Link to={`${id}`}>
+                <Link to={`/gallery/${id}`}>
                     <button>자세히 보기</button>
                 </Link>
                 <span onClick={() => setLike(!like)}>
