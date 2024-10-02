@@ -41,3 +41,12 @@ export const LIKECONTAINER = styled.div`
         font-weight: 700;
     }
 `;
+export const LOGINCONTAINER = styled.div`
+    width: 1400px;
+    padding: 100px;
+    margin: auto;
+    box-sizing: border-box;
+    h2 {
+        font-size: 50px;
+    }
+`;

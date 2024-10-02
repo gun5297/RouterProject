@@ -1,10 +1,13 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { GALLERYITEMCONTAINER } from './styled';
 import { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../../contexts/GlobalContext';
+import { AuthContext } from '../../contexts/AuthContext';
 
 const GalleryItem = ({ id, webformatURL, user }) => {
     const { data, likeData, addLikeData, delLikeData } = useContext(GlobalContext);
+    const { isAuth } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const [like, setLike] = useState(likeData.find((item) => item.id == id) ? true : false);
     useEffect(() => {
@@ -20,7 +23,13 @@ const GalleryItem = ({ id, webformatURL, user }) => {
                 <Link to={`/gallery/${id}`}>
                     <button>자세히 보기</button>
                 </Link>
-                <span onClick={() => setLike(!like)}>
+                <span
+                    onClick={() =>
+                        isAuth
+                            ? setLike(!like)
+                            : alert('로그인 후 이용가능한 서비스 입니다.') & navigate('/login')
+                    }
+                >
                     <i className='xi-heart'></i>
                 </span>
             </div>

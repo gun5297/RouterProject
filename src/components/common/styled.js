@@ -28,6 +28,10 @@ export const NAVCONTAINER = styled.div`
     align-items: center;
     box-sizing: border-box;
     margin: auto;
+    position: relative;
+    .wrap {
+        display: flex;
+    }
     nav {
         ul {
             width: 100%;
@@ -62,6 +66,35 @@ export const NAVCONTAINER = styled.div`
             right: -10px;
             top: -10px;
         }
+    }
+    .login {
+        a {
+            font-size: 18px;
+            font-weight: 700;
+            color: #fafafa;
+            position: relative;
+            &:not(:last-of-type) {
+                margin-right: 30px;
+                &::after {
+                    content: '';
+                    width: 2px;
+                    height: 20px;
+                    position: absolute;
+                    right: -15px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: #fafafa;
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+    .logout {
+        font-size: 18px;
+        font-weight: 700;
+        color: #fafafa;
+        cursor: pointer;
+        margin-right: 30px;
     }
 `;
 export const SUBNAVCONTAINER = styled.div`

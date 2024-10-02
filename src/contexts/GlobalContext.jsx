@@ -1,6 +1,5 @@
-import { createContext, useEffect, useMemo, useState } from 'react';
+import { createContext, useMemo, useState } from 'react';
 import { useAxios } from '../hooks/useAxios';
-import { useAxiosBoard } from '../hooks/useAxiosBoard';
 
 export const GlobalContext = createContext(null);
 

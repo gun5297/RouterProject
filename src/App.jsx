@@ -4,7 +4,9 @@ import Layout from './Layout/Layout';
 import About from './page/About';
 import Board from './page/Board';
 import Gallery from './page/Gallery';
+import Join from './page/Join';
 import Like from './page/Like';
+import Login from './page/Login';
 import Main from './page/Main';
 import GlobalStyle from './styled/reset';
 import { BrowserRouter, Route, Routes, Link, HashRouter } from 'react-router-dom';
@@ -19,6 +21,8 @@ const App = () => {
                         <Route index element={<Main />} />
                         <Route path='about' element={<About />} />
                         <Route path='news' element={<NewsDetails />} />
+                        <Route path='login' element={<Login />} />
+                        <Route path='join' element={<Join />} />
                         <Route path='gallery'>
                             <Route index element={<Gallery />} />
                             <Route path=':userId' element={<GalleryInfo />} />
