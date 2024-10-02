@@ -1,4 +1,5 @@
 import GalleryInfo from './components/gallery/GalleryInfo';
+import NewsDetails from './components/main/NewsDetails';
 import Layout from './Layout/Layout';
 import About from './page/About';
 import Board from './page/Board';
@@ -17,6 +18,7 @@ const App = () => {
                     <Route path='/' element={<Layout />}>
                         <Route index element={<Main />} />
                         <Route path='about' element={<About />} />
+                        <Route path='news' element={<NewsDetails />} />
                         <Route path='gallery'>
                             <Route index element={<Gallery />} />
                             <Route path=':userId' element={<GalleryInfo />} />

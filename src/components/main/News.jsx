@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom';
 import { NEWSCONTAINER } from './styled';
 
 const News = () => {
     return (
         <NEWSCONTAINER>
             <h2>porsche news</h2>
-            <div className='inner'>
+            <div className='news-inner'>
                 <div className='img-wrap'>
                     <img src='images/porsche-news.webp' alt='' />
                 </div>
@@ -17,7 +18,9 @@ const News = () => {
                         상징합니다. 카이엔 GTS 쿠페는 이러한 GTS의 상징적인 의미를 가장 현대적으로
                         표현한 모델입니다.
                     </p>
-                    <button>자세히 알아보기</button>
+                    <Link to='/news'>
+                        <button>자세히 알아보기</button>
+                    </Link>
                 </div>
             </div>
         </NEWSCONTAINER>

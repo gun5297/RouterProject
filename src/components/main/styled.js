@@ -28,7 +28,7 @@ export const NEWSCONTAINER = styled.div`
         text-align: center;
         margin: 80px 0px 30px 0px;
     }
-    .inner {
+    .news-inner {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -109,3 +109,4 @@ export const MAKEPORSHCECONTAINER = styled.div`
         }
     }
 `;
+export const NEWSDETAILSCONTAINER = styled.div``;
