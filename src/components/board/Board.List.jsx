@@ -29,10 +29,7 @@ const BoardList = ({ currentPosts, loading }) => {
             </div>
             {data.map((item) => item.isDone && <BoardItem key={item.id} {...item} />)}
             {currentPosts
-                .filter(
-                    (item) =>
-                        item.title.toLowerCase() | item.body.toLowerCase().includes(q.toLowerCase())
-                )
+                .filter((item) => item.title.toLowerCase().includes(q.toLowerCase()))
                 .map((item) => item.isDone === false && <BoardItem key={item.id} {...item} />)}
         </BOARDLISTCONTAINER>
     );
