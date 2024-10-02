@@ -6,7 +6,7 @@ const News = () => {
             <h2>porsche news</h2>
             <div className='inner'>
                 <div className='img-wrap'>
-                    <img src='/images/porsche-news.webp' alt='' />
+                    <img src='images/porsche-news.webp' alt='' />
                 </div>
                 <div className='content-wrap'>
                     <h3>

@@ -5,7 +5,7 @@ const AboutInfo = () => {
         <ABOUTINFOCONTAINER>
             <div className='img-wrap'>
                 <h2>porsche korea</h2>
-                <img src='/images/about-img.jpg' />
+                <img src='images/about-img.jpg' />
             </div>
             <p>
                 2014년 1월 1일 설립된 포르쉐코리아(“PKO”)는 올해 브랜드 탄생 74주년을 맞은 포르쉐
@@ -41,7 +41,7 @@ const AboutInfo = () => {
                 있습니다.
             </p>
             <p>
-                <img src='/images/porsche-normal.jpg' alt='' />
+                <img src='images/porsche-normal.jpg' alt='' />
             </p>
         </ABOUTINFOCONTAINER>
     );

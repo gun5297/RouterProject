@@ -29,7 +29,7 @@ export const BOARDITEMCONTAINER = styled.li`
     border: 1px solid #757575;
     border-radius: 10px;
     margin-bottom: 10px;
-    cursor: url('/images/click.png'), auto;
+    cursor: url('images/click.png'), auto;
     &.active {
         background: #616161;
         color: #fafafa;
