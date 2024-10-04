@@ -5,17 +5,20 @@ import Footer from '../components/common/Footer';
 import GlobalProvider from '../contexts/GlobalContext';
 import BoardProvider from '../contexts/BoardContext';
 import AuthProvider from '../contexts/AuthContext';
+import TagProvider from '../contexts/TagContext';
 
 const Layout = () => {
     return (
         <GlobalProvider>
             <BoardProvider>
                 <AuthProvider>
-                    <LAYOUTCONTAINER>
-                        <Header />
-                        <Outlet />
-                        <Footer />
-                    </LAYOUTCONTAINER>
+                    <TagProvider>
+                        <LAYOUTCONTAINER>
+                            <Header />
+                            <Outlet />
+                            <Footer />
+                        </LAYOUTCONTAINER>
+                    </TagProvider>
                 </AuthProvider>
             </BoardProvider>
         </GlobalProvider>

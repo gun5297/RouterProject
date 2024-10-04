@@ -109,4 +109,110 @@ export const MAKEPORSHCECONTAINER = styled.div`
         }
     }
 `;
-export const NEWSDETAILSCONTAINER = styled.div``;
+export const NEWSDETAILSCONTAINER = styled.div`
+    width: 100%;
+    .img-wrap {
+        overflow: hidden;
+        width: 1000px;
+        margin: auto;
+        margin-bottom: 80px;
+        img {
+            height: 100%;
+        }
+    }
+    p {
+        width: 800px;
+        margin: auto;
+        margin-bottom: 20px;
+        font-size: 18px;
+        word-break: keep-all;
+        &:last-of-type {
+            margin-bottom: 80px;
+        }
+    }
+    .tag {
+        width: 100%;
+        box-sizing: border-box;
+        .tag-span {
+            display: block;
+            margin-bottom: 10px;
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 0px 10px;
+            &:last-of-type {
+                margin-bottom: 80px;
+            }
+            span {
+                display: block;
+            }
+            button {
+                width: 50px;
+                height: 40px;
+                border: none;
+                background-color: #616161;
+                color: #fff;
+                cursor: pointer;
+                &:hover {
+                    background: #b71c1c;
+                }
+            }
+        }
+    }
+    form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        padding: 0px 10px;
+        span {
+            width: 5%;
+            display: block;
+        }
+        input {
+            width: 85%;
+            box-sizing: border-box;
+            height: 40px;
+        }
+        button {
+            width: 10%;
+            height: 40px;
+            border: none;
+            background-color: #616161;
+            color: #fff;
+            cursor: pointer;
+            &:hover {
+                background: #b71c1c;
+            }
+        }
+    }
+    .not-login {
+        width: 100%;
+        height: 100px;
+        margin-bottom: 80px;
+        background-color: #e0e0e0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        span {
+            display: block;
+            margin-bottom: 5px;
+        }
+        a {
+            display: block;
+            background: #616161;
+            padding: 5px 20px;
+            color: #fff;
+            font-size: 12px;
+            &:hover {
+                background: #b71c1c;
+            }
+        }
+    }
+`;

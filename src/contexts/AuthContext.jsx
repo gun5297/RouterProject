@@ -10,13 +10,17 @@ const AuthProvider = ({ children }) => {
     const [ip, setIp] = useState();
     const [isAuth, setIsAuth] = useState(false);
     const [user, setUser] = useState(null);
+    const [userId, setUserId] = useState(null);
     const [userList, setUserList] = useState(
         localStorage.getItem('userList') ? JSON.parse(localStorage.getItem('userList')) : []
     );
     const { setLikeData } = useContext(GlobalContext);
     const navigate = useNavigate();
     const login = (email, password) => {
-        if (userList && userList.find((item) => item.ip === ip)) {
+        if (userList.length === 0) {
+            alert('회원 가입후 이용해 주세요');
+            navigate('/join');
+        } else {
             if (!email && !password) {
                 return alert('누락된 정보가 있습니다.');
             }
@@ -30,14 +34,12 @@ const AuthProvider = ({ children }) => {
             ) {
                 alert('로그인성공');
                 setIsAuth(true);
+                setUserId(userList.find((item) => item.email === email).uuid);
                 setUser(userList.find((item) => item.email === email).name);
                 navigate('/');
             } else {
                 alert('Error');
             }
-        } else {
-            alert('회원 가입후 이용해 주세요');
-            navigate('/join');
         }
     };
     const logout = () => {
@@ -45,6 +47,7 @@ const AuthProvider = ({ children }) => {
         setLikeData([]);
         setIsAuth(false);
         setUser(null);
+        setUserId(null);
         navigate('/');
     };
 
@@ -62,10 +65,9 @@ const AuthProvider = ({ children }) => {
                 ) & navigate('/login')
             );
         } else {
-            setUserList([
-                ...userList,
-                { uuid: Math.floor(Math.random() * 10000), name, email, password, ip },
-            ]);
+            const uuid = Math.floor(Math.random() * 10000);
+            setUserList([...userList, { uuid, name, email, password, ip }]);
+            setUserId(uuid);
             alert('회원가입이 완료 되었습니다.');
             setIsAuth(true);
             setUser(name);
@@ -82,8 +84,8 @@ const AuthProvider = ({ children }) => {
     }, [userList]);
 
     const value = useMemo(
-        () => ({ login, logout, isAuth, user, userJoin }),
-        [login, logout, isAuth, user, userJoin]
+        () => ({ login, logout, isAuth, user, userJoin, userId }),
+        [login, logout, isAuth, user, userJoin, userId]
     );
 
     return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
