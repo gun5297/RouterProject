@@ -133,6 +133,7 @@ export const NEWSDETAILSCONTAINER = styled.div`
     .tag {
         width: 100%;
         box-sizing: border-box;
+        margin-bottom: 80px;
         .tag-span {
             display: block;
             margin-bottom: 10px;
@@ -143,9 +144,6 @@ export const NEWSDETAILSCONTAINER = styled.div`
             align-items: center;
             box-sizing: border-box;
             padding: 0px 10px;
-            &:last-of-type {
-                margin-bottom: 80px;
-            }
             span {
                 display: block;
             }

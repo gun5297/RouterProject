@@ -36,7 +36,7 @@ const AuthProvider = ({ children }) => {
                 setIsAuth(true);
                 setUserId(userList.find((item) => item.email === email).uuid);
                 setUser(userList.find((item) => item.email === email).name);
-                navigate('/');
+                navigate(-1);
             } else {
                 alert('Error');
             }
@@ -71,7 +71,7 @@ const AuthProvider = ({ children }) => {
             alert('회원가입이 완료 되었습니다.');
             setIsAuth(true);
             setUser(name);
-            navigate('/');
+            navigate(-1);
         }
     };
     useEffect(() => {

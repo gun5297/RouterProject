@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { TagContext } from '../../contexts/TagContext';
 
 const NewsDetails = () => {
-    const { isAuth, user, uuid } = useContext(AuthContext);
+    const { isAuth, user, userId } = useContext(AuthContext);
     const { tagData, removeTagData } = useContext(TagContext);
     return (
         <NEWSDETAILSCONTAINER>
@@ -45,18 +45,24 @@ const NewsDetails = () => {
 
                 <ul className='tag'>
                     <span className='tag-span'>댓글 {tagData.length}</span>
-                    {tagData.map((item) => (
-                        <li key={item.id}>
-                            <span>{item.user}</span>
-                            <span>{item.text}</span>
+                    {tagData.length !== 0 ? (
+                        tagData.map((item) => (
+                            <li key={item.id}>
+                                <span>{item.user}</span>
+                                <span>{item.text}</span>
 
-                            {item.user === user && (
-                                <div className='btn-wrap'>
-                                    <button onClick={() => removeTagData(item.id)}>삭제</button>
-                                </div>
-                            )}
+                                {item.uuid === userId && (
+                                    <div className='btn-wrap'>
+                                        <button onClick={() => removeTagData(item.id)}>삭제</button>
+                                    </div>
+                                )}
+                            </li>
+                        ))
+                    ) : (
+                        <li>
+                            <span>게시된 댓글이 없습니다.</span>
                         </li>
-                    ))}
+                    )}
                 </ul>
             </div>
         </NEWSDETAILSCONTAINER>
