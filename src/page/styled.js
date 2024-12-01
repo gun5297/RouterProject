@@ -44,6 +44,7 @@ export const LIKECONTAINER = styled.div`
 export const LOGINCONTAINER = styled.div`
     width: 1400px;
     padding: 100px;
+    min-height: 100vh;
     margin: auto;
     box-sizing: border-box;
     h2 {
