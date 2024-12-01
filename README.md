@@ -134,7 +134,7 @@ $ yarn dev
 
 <div style='display:flex;justify-content: center; align-items: center;'>
 
-|    메인 배너     |
+|      게시판      |
 | :--------------: |
 |   페이지네이션   |
 |    검색 기능     |
